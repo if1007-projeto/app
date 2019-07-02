@@ -7,7 +7,8 @@ node
 npm
 
 Como utilizar:
-npm i -g @angular/cli
-ng serve --open 
+- npm i -g @angular/cli
+- npm install typed.js
+- ng serve --open 
 
 
