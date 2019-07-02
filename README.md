@@ -6,6 +6,8 @@ angular cli
 node
 npm
 
-Como utilizar
-npm istall
+Como utilizar:
+npm i -g @angular/cli
 ng serve --open 
+
+
