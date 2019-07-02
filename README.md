@@ -2,9 +2,9 @@
  
 
 Pré-requisitos
-angular cli 
-node
-npm
+- angular cli 
+- node
+- npm
 
 Como utilizar:
 - npm i -g @angular/cli
