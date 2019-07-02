@@ -12,7 +12,7 @@
 <h3>All registered users:</h3>
 <ul>
     <li *ngFor="let user of users">
-        {{user.username}} ({{user.firstName}} {{user.lastName}})
+        <b>Client:</b> {{user.firstName}} {{user.lastName}} <b>Email:</b> {{user.email}} <b>Addres:</b> {{user.street}} {{user.cc}}  - {{user.username}}
         - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
     </li>
 </ul>
