@@ -1,0 +1,58 @@
+<h2>Register</h2>
+<br>
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <h4>Address:</h4>
+    <hr>
+    <div class="form-group">
+            
+        <label for="street">Street</label>
+        <input type="text" formControlName="street" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.street.errors }" />
+        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+            <div *ngIf="f.street.errors.required">Street is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="zipcode">Zip code</label>
+        <input type="number" formControlName="zipcode" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.zipcode.errors }" />
+        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+            <div *ngIf="f.zipcode.errors.required">Zip code is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="cc">Country and city</label>
+        <input type="text" formControlName="cc" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.cc.errors }" />
+        <div *ngIf="submitted && f.cc.errors" class="invalid-feedback">
+            <div *ngIf="f.cc.errors.required">Country and city is required</div>
+        </div>
+    </div>
+
+    <h4>Credit Card:</h4>
+    <hr>
+    <div class="form-group">
+            <label for="number">Number</label>
+            <input type="number" formControlName="number" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.number.errors }" />
+            <div *ngIf="submitted && f.number.errors" class="invalid-feedback">
+                <div *ngIf="f.number.errors.required">number is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+                <label for="date">Expiration date</label>
+                <input type="date" formControlName="date" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.date.errors }" />
+                <div *ngIf="submitted && f.date.errors" class="invalid-feedback">
+                    <div *ngIf="f.date.errors.required">Expiration date is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                    <label for="cvc">cvc</label>
+                    <input type="number" formControlName="cvc" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.cvc.errors }" />
+                    <div *ngIf="submitted && f.cvc.errors" class="invalid-feedback">
+                        <div *ngIf="f.cvc.errors.required">cvc  is required</div>
+                    </div>
+                </div>
+    
+    <div class="form-group">
+        <button [disabled]="loading" class="btn btn-primary">Buy</button>
+        <img *ngIf="loading" class="pl-3" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+        <a routerLink="/home" class="btn btn-link">Cancel</a>
+    </div>
+</form>
