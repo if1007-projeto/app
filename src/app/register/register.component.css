@@ -1,0 +1,15 @@
+.tag {
+	font-size: 90pt;
+    color: rgb(56, 56, 56);
+    font-weight: bold;
+    position: relative;
+    right:  30px;
+    
+
+    text-shadow: 3px 3px rgb(131, 130, 130);
+    width: 70px;
+    height: 70px;
+
+  
+  
+}

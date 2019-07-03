@@ -22,9 +22,11 @@ import { ContentComponent } from './content/content.component'
 ;
 import { ContatoComponent } from './contato/contato.component'
 ;
-import { BuyServiceComponent } from './buy-service/buy-service.component';
+import { BuyServiceComponent } from './buy-service/buy-service.component'
+;
 import { AdminComponent } from './admin/admin.component'
 ;
+import { MyserviceComponent } from './myservice/myservice.component';
 
 @NgModule({
     imports: [
@@ -46,7 +48,8 @@ import { AdminComponent } from './admin/admin.component'
         ContentComponent ,
         ContatoComponent ,
         BuyServiceComponent ,
-        AdminComponent],
+        AdminComponent,
+        MyserviceComponent],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },

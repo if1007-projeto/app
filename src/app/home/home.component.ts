@@ -1,4 +1,4 @@
-﻿import { Component, OnInit, OnDestroy } from '@angular/core';
+﻿import { Component, OnInit, OnDestroy, ViewChild, ElementRef } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { first } from 'rxjs/operators';
 import { Router } from '@angular/router';
@@ -44,7 +44,8 @@ export class HomeComponent implements OnInit, OnDestroy {
             this.users = users;
         });
     }
-    buyService() { 
-        this.router.navigate(['../buy-service/buy-service.component']);
-    }
+    
+
+
+   
 }

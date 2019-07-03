@@ -8,6 +8,7 @@ import { ContatoComponent } from './contato/contato.component';
 import { BuyServiceComponent } from './buy-service/buy-service.component';
 import { AdminComponent } from './admin/admin.component';
 import { AuthGuard } from './_guards';
+import { MyserviceComponent } from './myservice/myservice.component';
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent, canActivate: [AuthGuard] },
@@ -17,6 +18,7 @@ const appRoutes: Routes = [
     { path: 'contato.component', component: ContatoComponent },
     { path: 'buy-service.component', component: BuyServiceComponent },
     { path: 'admin.component', component: AdminComponent },
+    { path: 'myservice.component', component:  MyserviceComponent },
     // otherwise redirect to home
     { path: '**', redirectTo: '' }
 ];

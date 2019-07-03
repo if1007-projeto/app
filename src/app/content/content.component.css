@@ -28,9 +28,13 @@
     color: rgb(56, 56, 56);
     font-weight: bold;
     position: absolute;
-    left: -58px;
-	bottom: -39px;
-	text-shadow: 3px 3px rgb(131, 130, 130);
+    left: -220px;
+	bottom: -19px;
+    text-shadow: 3px 3px rgb(131, 130, 130);
+    width: 400px;
+    height: 300px;
+  
+  
 }
 
 
